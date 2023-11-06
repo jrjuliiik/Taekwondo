@@ -1,0 +1,12 @@
+#carouselExampleControls {
+    transition: transform 0.5s; /* Agrega una transición de desplazamiento */
+}
+
+.carousel-inner {
+    display: flex;
+}
+
+.carousel-inner .carousel-item {
+    flex: 0 0 100%;
+}
+

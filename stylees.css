@@ -1,0 +1,468 @@
+/* Google Fonts - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #23242a;
+    }
+    .box{
+        position: relative;
+        width: 380px;
+        height: 420px;
+        background: #1c1c1c;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+    .box::before{
+        content: '';
+        position: absolute;
+        top: -50%;
+        left:-50% ;
+        width: 320px;
+        height: 420px;
+        background:linear-gradient(0deg,transparent,#45f3ff,
+        transparent,#45f3ff) ;
+        transform-origin: bottom right;
+        animation: animate 6s linear infinite;
+    }
+    .box::after{
+        content: '';
+        position: absolute;
+        top: -50%;
+        left:-50% ;
+        width: 320px;
+        height: 420px;
+        background:linear-gradient(10deg,transparent,#45f3ff,
+        transparent,#45f3ff) ;
+        transform-origin: bottom right;
+        animation: animate 6s linear infinite;
+        animation-delay: -3s;
+    }
+    @keyframes animate{
+        0%{
+            transform: rotate(0deg);
+        }
+        100%{
+            transform: rotate(360deg);
+        }
+    }
+
+    .form{
+        position:absolute;
+        inset: 2px;
+        border-radius: 8px;
+        background: #28292d;
+        z-index: 10;
+		padding:50px 40px;
+		display: flex;
+		flex-direction: column;
+    }
+	.form h2{
+		color: #45f3ff;
+		font-weight: 500;
+		text-align: center;
+		letter-spacing: 0.1em;
+	}
+	.inputbox{
+		position: relative;
+		width: 300px;
+		margin-top: 35px;
+
+}
+
+.inputbox input{
+	position: relative;
+	width: 100%;
+	padding: 20px 10px 10px;
+	background: transparent;
+	border: none;
+	outline: none;
+	color: #23242a;
+	font-size: 1em;
+	letter-spacing: 0.05em;
+	z-index: 10;
+}
+
+.inputbox span{
+	position: absolute;
+	left: 0;
+	padding: 20px 0px 10px;
+	font-size: 1em;
+	color: #8f8f8f;
+	pointer-events: none;
+	letter-spacing: 0.05em;
+	transition: 0.5s;
+}
+.inputbox input:valid ~ span,
+.inputbox input:focus ~ span
+{
+	color: #45f3ff;
+	transform:translateX(0px) translateY(-34px);
+	font-size: 0.75em;
+}
+.inputbox i{
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 2px;
+	background: #45f3ff;
+	border-radius: 4px;
+	transition: 0.5s;
+	pointer-events: none;
+}
+.inputbox input:valid ~ i,
+.inputbox input:focus ~ i{
+  height: 44px;
+}
+.links{
+	display: flex;
+	justify-content: space-between;
+}
+.links a{
+	margin: 10px 0;
+	font-size: 0.75em;
+	color: #8f8f8f;
+	text-decoration: none;
+}
+.links a:hover,
+.links a:nth-child(2){
+	color: #45f3ff;
+}
+input[type="submit"]
+{
+	border: none;
+	outline: none;
+	background: #45f3ff;
+	padding: 11px 25px;
+	width: 100px;
+	margin-top: 10px;
+	border-radius: 4px;
+	font-weight: 600;
+	cursor: pointer;
+}
+input[type="submit"]:active
+{
+	opacity: 0.8;
+}
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 180vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins";
+  background: #ebe7e7;
+}
+
+.container {
+  width: 640px;
+  background: #ffffff;
+  overflow: hidden;
+  border-radius: 3px;
+  border: 1px solid #dbdbdb;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+}
+
+.top_bar {
+  width: 100%;
+  height: 75px;
+  padding: 25px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.profile_img {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.profile_img img {
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: inline-block;
+  object-fit: cover;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.profile_img span {
+  margin-left: 50px;
+}
+
+.main_img {
+  width: 640px;
+  height: 640px;
+  margin-bottom: 15px;
+}
+
+.main_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.footer {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.icons {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+}
+
+.icons .fa {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.icons .left_side .fa {
+  margin: 0px 3px;
+  color: #010101;
+}
+
+.likeCount p {
+  color: #010101;
+  font-size: 14px;
+}
+
+.content p {
+  padding: 5px 0;
+}
+
+.comments p {
+  font-size: 14px;
+  color: #dbdbdb;
+  padding: 5px 0;
+  padding-bottom: 10px;
+}
+
+.comments_box {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icon {
+  padding: 8px 16px 8px 0;
+  font-size: 24px;
+}
+
+.input_field {
+  width: 100%;
+}
+
+.input_field input {
+  width: 100%;
+  padding: 10px;
+  border: none !important;
+  outline: none;
+}
+
+.btn button {
+  background: transparent;
+  padding: 10px;
+  outline: none;
+  border: none;
+  color: #207be2;
+  font-weight: 600;
+  cursor: pointer;
+}
+html {
+	height: 100%;
+  }
+  body {
+	margin:0;
+	padding:0;
+	font-family: sans-serif;
+	background: linear-gradient(#141e30, #243b55);
+  }
+  
+  .login-box {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 400px;
+	padding: 40px;
+	transform: translate(-50%, -50%);
+	background: rgba(0,0,0,.5);
+	box-sizing: border-box;
+	box-shadow: 0 15px 25px rgba(0,0,0,.6);
+	border-radius: 10px;
+  }
+  
+  .login-box h2 {
+	margin: 0 0 30px;
+	padding: 0;
+	color: #fff;
+	text-align: center;
+  }
+  
+  .login-box .user-box {
+	position: relative;
+  }
+  
+  .login-box .user-box input {
+	width: 100%;
+	padding: 10px 0;
+	font-size: 16px;
+	color: #fff;
+	margin-bottom: 30px;
+	border: none;
+	border-bottom: 1px solid #fff;
+	outline: none;
+	background: transparent;
+  }
+  .login-box .user-box label {
+	position: absolute;
+	top:0;
+	left: 0;
+	padding: 10px 0;
+	font-size: 16px;
+	color: #fff;
+	pointer-events: none;
+	transition: .5s;
+  }
+  
+  .login-box .user-box input:focus ~ label,
+  .login-box .user-box input:valid ~ label {
+	top: -20px;
+	left: 0;
+	color: #03e9f4;
+	font-size: 12px;
+  }
+  
+  .login-box form a {
+	position: relative;
+	display: inline-block;
+	padding: 10px 20px;
+	color: #03e9f4;
+	font-size: 16px;
+	text-decoration: none;
+	text-transform: uppercase;
+	overflow: hidden;
+	transition: .5s;
+	margin-top: 40px;
+	letter-spacing: 4px
+  }
+  
+  .login-box a:hover {
+	background: #03e9f4;
+	color: #fff;
+	border-radius: 5px;
+	box-shadow: 0 0 5px #03e9f4,
+				0 0 25px #03e9f4,
+				0 0 50px #03e9f4,
+				0 0 100px #03e9f4;
+  }
+  
+  .login-box a span {
+	position: absolute;
+	display: block;
+  }
+  
+  .login-box a span:nth-child(1) {
+	top: 0;
+	left: -100%;
+	width: 100%;
+	height: 2px;
+	background: linear-gradient(90deg, transparent, #03e9f4);
+	animation: btn-anim1 1s linear infinite;
+  }
+  
+  @keyframes btn-anim1 {
+	0% {
+	  left: -100%;
+	}
+	50%,100% {
+	  left: 100%;
+	}
+  }
+  
+  .login-box a span:nth-child(2) {
+	top: -100%;
+	right: 0;
+	width: 2px;
+	height: 100%;
+	background: linear-gradient(180deg, transparent, #03e9f4);
+	animation: btn-anim2 1s linear infinite;
+	animation-delay: .25s
+  }
+  
+  @keyframes btn-anim2 {
+	0% {
+	  top: -100%;
+	}
+	50%,100% {
+	  top: 100%;
+	}
+  }
+  
+  .login-box a span:nth-child(3) {
+	bottom: 0;
+	right: -100%;
+	width: 100%;
+	height: 2px;
+	background: linear-gradient(270deg, transparent, #03e9f4);
+	animation: btn-anim3 1s linear infinite;
+	animation-delay: .5s
+  }
+  
+  @keyframes btn-anim3 {
+	0% {
+	  right: -100%;
+	}
+	50%,100% {
+	  right: 100%;
+	}
+  }
+  
+  .login-box a span:nth-child(4) {
+	bottom: -100%;
+	left: 0;
+	width: 2px;
+	height: 100%;
+	background: linear-gradient(360deg, transparent, #03e9f4);
+	animation: btn-anim4 1s linear infinite;
+	animation-delay: .75s
+  }
+  
+  @keyframes btn-anim4 {
+	0% {
+	  bottom: -100%;
+	}
+	50%,100% {
+	  bottom: 100%;
+	}
+  }
+  
